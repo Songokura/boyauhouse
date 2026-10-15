@@ -456,7 +456,7 @@ html[lang="kk"] #h1 .l2{font-size:var(--fs2,clamp(30px,min(5.2vw,7.8svh),74px))}
 html[lang="kk"] .plate h2{font-size:clamp(28px,min(3.6vw,6.2svh),50px)}
 @media (max-width:760px){
   html[lang="kk"] #h1 .l1{font-size:var(--fs,clamp(26px,min(7.6vw,5.8svh),46px))}
-  html[lang="kk"] #h1 .l2{font-size:var(--fs2,clamp(24px,min(7vw,5.4svh),42px))}
+  html[lang="kk"] #h1 .l2{font-size:var(--fs2,clamp(24px,min(7vw,4.8svh),42px))}
 }
 
 /* ---------- reduced motion ---------- */
