@@ -405,7 +405,7 @@ html:not(.js) .pw{--open:1}
   #h1 .l2{font-size:var(--fs2,clamp(28px,min(8vw,6svh),48px))}
   .head h2,.dost-txt h2{font-size:clamp(27px,7.6vw,40px)}
   .ribbon{height:42px}
-  .pl-hero .grad{background:linear-gradient(to top,rgba(26,24,25,.97) 0,rgba(26,24,25,.9) 45%,rgba(26,24,25,.72) 62%,rgba(26,24,25,.3) 82%,rgba(26,24,25,.2) 100%)}
+  .pl-hero .grad{background:linear-gradient(to top,rgba(26,24,25,.97) 0,rgba(26,24,25,.9) 45%,rgba(26,24,25,.7) 60%,rgba(26,24,25,.15) 80%,rgba(26,24,25,.05) 100%)}
   .sig-hero{--n:6;--dg:15deg;--st:.11;--span:.45}
   .sig-hero .fc:nth-child(n+7){display:none}
   .fc{background-image:var(--imgm,var(--img))}
