@@ -403,6 +403,7 @@ html:not(.js) .pw{--open:1}
   .hero-txt .cta .btn{width:100%}
   #h1 .l1{font-size:var(--fs,clamp(30px,min(8.6vw,6.4svh),52px))}
   #h1 .l2{font-size:var(--fs2,clamp(28px,min(8vw,6svh),48px))}
+  #h1 .l2{white-space:normal;line-height:1.05;text-wrap:balance}
   .head h2,.dost-txt h2{font-size:clamp(27px,7.6vw,40px)}
   .ribbon{height:42px}
   .pl-hero .grad{background:linear-gradient(to top,rgba(26,24,25,.97) 0,rgba(26,24,25,.9) 45%,rgba(26,24,25,.7) 60%,rgba(26,24,25,.15) 80%,rgba(26,24,25,.05) 100%)}
