@@ -142,8 +142,8 @@ body.menu-open{overflow:hidden}
   -webkit-mask:radial-gradient(circle at 100% 100%,#000 0,transparent 80%);mask:radial-gradient(circle at 100% 100%,#000 0,transparent 80%)}
 .sig.l .sig-back::after{background:repeating-conic-gradient(from 0deg at 0% 100%,rgba(233,185,73,.2) 0 .25deg,transparent .25deg 11.25deg);-webkit-mask:radial-gradient(circle at 0% 100%,#000 0,transparent 80%);mask:radial-gradient(circle at 0% 100%,#000 0,transparent 80%)}
 .sig .ph{position:absolute;inset:0;opacity:0}
-.sig .ph picture,.sig .ph img{position:absolute;inset:0;width:100%;height:100%}
-.sig .ph img{object-fit:cover;object-position:var(--pos,50% 50%)}
+.sig .ph picture,.sig .ph img,.sig .ph video{position:absolute;inset:0;width:100%;height:100%}
+.sig .ph img,.sig .ph video{object-fit:cover;object-position:var(--pos,50% 50%)}
 .sig.done .ph{opacity:1}
 .fan{position:absolute;inset:0}
 .fc{position:absolute;inset:0;display:block;
@@ -204,7 +204,7 @@ html:not(.js) .fc{display:none}
 .pl-svc .lead{font-size:clamp(16.5px,1.25vw,19px)}
 .sig-panel{position:relative;inset:auto;height:min(calc(100svh - var(--hdr) - 64px),740px);--n:6;--dg:15deg;--st:.11;--span:.45;border-radius:var(--rad);box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
 .sig-panel .fc:nth-child(n+7){display:none}
-.sig-panel .ph img{transform:scale(calc(1 + .06*var(--exit)));transform-origin:50% 60%}
+.sig-panel .ph img,.sig-panel .ph video{transform:scale(calc(1 + .06*var(--exit)));transform-origin:50% 60%}
 .why{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px 22px}
 .why li{display:flex;gap:12px;align-items:flex-start}
 .why svg{display:block;flex:0 0 auto;color:var(--gold);margin-top:2px}
@@ -301,6 +301,15 @@ html:not(.js) .fc{display:none}
 .pr figcaption{display:flex;flex-direction:column;gap:2px;padding:0 4px}
 .pr figcaption b{font:600 16px/1.25 var(--ft);color:var(--txt)}
 .pr figcaption span{font-size:14px;color:var(--mute)}
+/* лента ходовых позиций в каталоге */
+.tov-head{margin-top:clamp(48px,6vw,80px);align-items:flex-end}
+.tov-h{font:600 clamp(22px,2.2vw,30px)/1.2 var(--fd,var(--ft));color:var(--txt);margin:0}
+.tov{flex:0 0 min(64vw,280px);scroll-snap-align:start;display:flex;flex-direction:column;gap:12px;margin:0}
+.tov img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:var(--rad);background:var(--stone2)}
+.tov figcaption{display:flex;flex-direction:column;gap:2px;padding:0 4px}
+.tov figcaption b{font:600 16px/1.25 var(--ft);color:var(--txt)}
+.tov figcaption span{font-size:14px;color:var(--mute)}
+.tov figcaption .lnk{margin-top:8px;align-self:flex-start}
 .pr-note{margin-top:26px;font-size:15px;color:var(--txt2);line-height:1.5;padding-left:16px;border-left:2px solid var(--gold)}
 
 /* ---------- заводы и партнёры ---------- */

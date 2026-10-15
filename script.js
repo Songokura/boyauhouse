@@ -33,7 +33,8 @@
     himiya: "Здравствуйте! " + SITE + " Нужна цена на строительную химию. Позиции: ",
     dostavka: "Здравствуйте! " + SITE + " Уточните сроки и доставку. Город и объём: ",
     kontakty: "Здравствуйте! " + SITE + " Нужен расчёт по лакокрасочным материалам.",
-    sticky: "Здравствуйте! " + SITE + " Нужен расчёт по лакокрасочным материалам."
+    sticky: "Здравствуйте! " + SITE + " Нужен расчёт по лакокрасочным материалам.",
+    tov: "Здравствуйте! " + SITE + " Нужна цена и наличие:"
   } };
   W.addEventListener("click", function (e) {
     var a = e.target && e.target.closest ? e.target.closest("a[data-wa]") : null;
@@ -41,6 +42,9 @@
     var key = a.getAttribute("data-wa") || "default";
     var d = WA[LANG] || WA.ru;
     var text = d[key] || WA.ru[key] || WA.ru["default"];
+    /* карточка товара: шаблон + название отдельной строкой */
+    var card = key.indexOf("tov-") === 0 ? a.closest(".tov") : null;
+    if (card) { var nm = card.querySelector("figcaption b"); text = (d.tov || WA.ru.tov) + "\n" + (nm ? nm.textContent.trim() : ""); }
     a.setAttribute("href", "https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(text));
   }, true);
 
@@ -294,6 +298,21 @@
     rv.forEach(function (el) { io.observe(el); });
     setTimeout(function () { rv.forEach(function (el) { if (!el.classList.contains("in") && el.getBoundingClientRect().top < W.innerHeight) el.classList.add("in"); }); }, 1500);
   } else rv.forEach(function (el) { el.classList.add("in"); });
+
+  /* ---------- Видео-петли в плитах: src только у видимого ролика ---------- */
+  var loops = [].slice.call(doc.querySelectorAll("video.loop[data-src]"));
+  if (loops.length && "IntersectionObserver" in W && !REDUCED) {
+    var vio = new IntersectionObserver(function (es) {
+      es.forEach(function (x) {
+        var v = x.target;
+        if (x.isIntersecting) {
+          if (!v.getAttribute("src")) v.src = v.getAttribute("data-src");
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        } else if (!v.paused) v.pause();
+      });
+    }, { threshold: 0.25 });
+    loops.forEach(function (v) { vio.observe(v); });
+  }
 
   /* ---------- Форма -> WhatsApp ---------- */
   var form = doc.getElementById("form"), thanks = doc.getElementById("thanks"), ferr = doc.getElementById("ferr");
