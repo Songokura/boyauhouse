@@ -282,6 +282,7 @@ html:not(.js) .fc{display:none}
 .nick{color:#A5A39C;font-size:15px}
 @media (max-width:900px){.bento{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:12px}.bt-a{grid-column:1/3;grid-row:auto;aspect-ratio:16/10}.bt-b,.bt-d{grid-column:auto;grid-row:auto;aspect-ratio:4/5}.bt-c{grid-column:1/3;grid-row:auto;flex-direction:row;padding:18px}.bt-c .rate{flex:1 1 0}}
 @media (max-width:480px){.bt-c{flex-direction:column}.bt-b{aspect-ratio:1}.bt-d{aspect-ratio:1}}
+@media (max-width:900px){.bt-c{order:5}.bt-e{display:block;grid-column:1/3;aspect-ratio:16/10}.bt img{filter:saturate(1.18) contrast(1.06)}}
 
 /* ---------- проекты: лента со стрелками ---------- */
 .arrs{display:flex;gap:10px;flex:0 0 auto}
