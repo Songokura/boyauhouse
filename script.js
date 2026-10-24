@@ -13,8 +13,8 @@
   var VW = W.innerWidth, VH = W.innerHeight;
   var LANG = "ru";
 
-  /* ---------- Контакты: номер - заглушка, меняется в одном месте вместе с атрибутами href в index.html ---------- */
-  var PHONE = "XXXXXXXXXX";
+  /* ---------- Контакты: номер меняется здесь и в атрибутах href в index.html ---------- */
+  var PHONE = "77710609614";
   var WA_NUM = PHONE;
 
   /* ---------- WhatsApp: текст собирается в момент клика (фаза захвата на window, совместимо с LeadBot) ---------- */

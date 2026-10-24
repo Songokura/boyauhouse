@@ -13,7 +13,7 @@ window.SITE_KK = {
   "nav.proekty": "Жобалар",
   "nav.kontakty": "Байланыс",
   "ig.aria": "Boyau House Instagram парақшасы",
-  "tel.aria": "Қоңырау шалу +7 XXX XXX XX XX",
+  "tel.aria": "Қоңырау шалу +7 771 060 96 14",
   "lang.aria": "Сайт тілі",
   "menu.aria": "Мәзір",
   "menu.nav": "Мобильді мәзір",
