@@ -3,6 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-666861905"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-666861905');
+
+  /* Конверсии Google Ads вызываются из script.js по действию пользователя,
+     а не при загрузке страницы. */
+
+  /* «Интерактивные номера телефонов» - клик по tel:-ссылке */
+  window.gtagTelClick = function () {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-666861905/Y6JJCKL5hasdENGC_r0C',
+      'value': 1.0,
+      'currency': 'USD'
+    });
+  };
+
+  /* «Контакт» - клик по ссылке WhatsApp */
+  window.gtagWaClick = function () {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-666861905/wWbRCJiThqsdENGC_r0C',
+      'value': 1.0,
+      'currency': 'USD'
+    });
+  };
+
+  /* «Отправка формы для потенциальных клиентов» - успешная отправка #form */
+  window.gtagFormSubmit = function () {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-666861905/e0V6CNShgasdENGC_r0C',
+      'value': 1.0,
+      'currency': 'USD'
+    });
+  };
+</script>
 <title>Лакокрасочные материалы оптом в Астане - Boyau House</title>
 <meta name="description" content="Boyau House: сеть магазинов ЛКМ с 2015 года. Более 5000 наименований промышленных и строительных красок, эмалей, грунтовок и огнезащиты от заводов РФ, Турции и РК. Колеровка 20 000 оттенков, расчёт и КП под объём, бесплатная доставка по Астане, Актау и областям.">
 <link rel="canonical" href="https://boyauhouse.kz/">
@@ -28,7 +67,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Onest:wght@400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/img/hero-cans-wide.webp" media="(min-width: 761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-cans-tall.webp" media="(max-width: 760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261024-1">
+<link rel="stylesheet" href="styles.css?v=20261027-1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -570,6 +609,6 @@
   <a class="st-ig" href="https://instagram.com/boyau_house_kaz" target="_blank" rel="noopener" aria-label="Instagram" data-i-aria="st.ig"><svg width="22" height="22"><use href="#ic-ig"/></svg></a>
 </div>
 
-<script src="script.js?v=20261024-1" defer></script>
+<script src="script.js?v=20261027-1" defer></script>
 </body>
 </html>

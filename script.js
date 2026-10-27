@@ -48,6 +48,15 @@
     a.setAttribute("href", "https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(text));
   }, true);
 
+  /* ---------- Конверсии Google Ads: клики tel / WhatsApp ---------- */
+  doc.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a) return;
+    var h = a.getAttribute("href") || "";
+    if (h.indexOf("tel:") === 0) { if (W.gtagTelClick) W.gtagTelClick(); }
+    else if (h.indexOf("https://wa.me/") === 0 || a.hasAttribute("data-wa")) { if (W.gtagWaClick) W.gtagWaClick(); }
+  });
+
   /* ---------- fitText для строк заголовка героя ---------- */
   var h1 = doc.getElementById("h1");
   function fitLine(sel, prop) {
@@ -332,6 +341,7 @@
       if (f.company.value.trim()) lines.push(L.company + ": " + f.company.value.trim());
       if (f.message.value.trim()) lines.push(L.msg + ": " + f.message.value.trim());
       var url = "https://wa.me/" + WA_NUM + "?text=" + encodeURIComponent(lines.join("\n"));
+      if (W.gtagFormSubmit) W.gtagFormSubmit();
       W.open(url, "_blank", "noopener");
       if (thanks) { thanks.hidden = false; try { thanks.focus({ preventScroll: true }); } catch (err) {} }
       form.reset();
